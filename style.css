@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    height: 15em;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(35deg);
+}
+
+.container div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    transform-style: preserve-3d;
+}
+
+.container div span {
+    background-color: rgb(73, 208, 208);
+    height: 100%;
+    width: 3rem;
+    position: relative;
+    animation: animate 2.8s linear infinite;
+    margin-right: .5rem;
+}
+
+.container div span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.container div span:nth-child(2) {
+    animation-delay: 0.2s;
+    background-color: rgb(112, 178, 178);
+}
+
+.container div span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.container div span:nth-child(4) {
+    animation-delay: 0.6s;
+    background-color: rgb(112, 178, 178);
+}
+
+.container div span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.container div span:nth-child(6) {
+    animation-delay: 1s;
+    background-color: rgb(112, 178, 178);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
